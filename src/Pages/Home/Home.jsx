@@ -10,7 +10,16 @@ const Home = () => {
   fetchData();
   return (
     <div className="container">
-      <h1>Home</h1>
+      <div className="background-color">
+        <div className="bg-1">
+          <h1>Chat app</h1>
+        </div>
+        <div className="bg-2">
+          <div className="image">
+            <img src="assets/bgimage.png" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
