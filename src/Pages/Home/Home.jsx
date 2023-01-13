@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Login } from "../../Components";
+import { Login, Signup } from "../../Components";
 import "./Home.scss";
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 
@@ -32,7 +32,7 @@ const Home = () => {
                   <Login />
                 </TabPanel>
                 <TabPanel>
-                  <p>two!</p>
+                  <Signup />
                 </TabPanel>
               </TabPanels>
             </Tabs>
