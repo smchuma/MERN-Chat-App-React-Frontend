@@ -25,23 +25,6 @@
       input::placeholder {
         color: black;
       }
-
-      button {
-        width: 150px;
-        padding: 10px;
-        border-radius: 20px;
-        background: transparent;
-        border: 1px solid #2dbdaf;
-        color: rgb(0, 0, 0);
-        transition: 0.2s ease-in-out;
-        cursor: pointer;
-
-        &:hover {
-          background: #2dbdaf;
-          color: rgb(255, 255, 255);
-          transform: scale(1.1);
-        }
-      }
     }
   }
 }
