@@ -77,6 +77,7 @@ const Login = () => {
           <Input
             placeholder="Enter your email"
             onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
         </FormControl>
         <FormControl id="password" isRequired>
@@ -86,6 +87,7 @@ const Login = () => {
               type={show ? "text" : "password"}
               placeholder="Enter your password"
               onChange={(e) => setPassword(e.target.value)}
+              value={password}
             />
             <InputRightElement width="4.5rem">
               <Button h="1.75rem" size="sm" onClick={handleClick}>
@@ -112,8 +114,8 @@ const Login = () => {
             marginTop: "20px",
           }}
           onClick={() => {
-            setEmail("guest@chatyee.com");
-            setPassword("guest");
+            setEmail("guest@chatyee.net");
+            setPassword("guest123");
           }}
         >
           Guest
