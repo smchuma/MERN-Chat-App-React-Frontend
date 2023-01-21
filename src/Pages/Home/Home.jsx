@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import { Login, Signup } from "../../Components";
 import "./Home.scss";
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("userInfo"));
+    if (user) {
+      navigate("/chats");
+    }
+  }, [navigate]);
+
   const fetchData = async () => {};
   fetchData();
   return (
