@@ -1,5 +1,5 @@
 .profile {
-  background-color: #00ffe5 !important;
+  background-color: #02ebd4 !important;
 
   .titles {
     display: flex;
@@ -8,18 +8,26 @@
     margin: 30px;
     border-bottom: 1px solid black;
 
-    .icon {
-      font-size: 30px;
-    }
-
-    .text {
-      h1 {
-        font-size: 20px;
-        text-align: start;
-      }
-    }
     i {
       margin-top: 20px;
+      font-size: 20px;
+      color: #004f47;
+    }
+
+    .text-content {
+      display: flex;
+
+      .text {
+        margin-left: 50px;
+        color: #004f47;
+
+        h1 {
+          font-size: 18px;
+        }
+        h3 {
+          font-size: 14px;
+        }
+      }
     }
   }
 }
