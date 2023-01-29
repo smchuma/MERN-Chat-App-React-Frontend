@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import axios from "axios";
 import { Login, Signup } from "../../Components";
 import "./Home.scss";
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";

@@ -1,0 +1,10 @@
+.chatPage {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #25eccf 0%, #aeffe7 50%, #feffff 100%);
+  display: flex;
+
+  .chatSections {
+    display: flex;
+  }
+}
