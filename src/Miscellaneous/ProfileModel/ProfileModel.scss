@@ -1,0 +1,25 @@
+.profile {
+  background-color: #00ffe5 !important;
+
+  .titles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+    border-bottom: 1px solid black;
+
+    .icon {
+      font-size: 30px;
+    }
+
+    .text {
+      h1 {
+        font-size: 20px;
+        text-align: start;
+      }
+    }
+    i {
+      margin-top: 20px;
+    }
+  }
+}
