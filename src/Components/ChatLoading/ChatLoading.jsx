@@ -4,17 +4,12 @@ import "./ChatLoading.scss";
 const ChatLoading = () => {
   return (
     <Stack>
-      <Skeleton height="35px" className="skeleton" />
-      <Skeleton height="35px" className="skeleton" />
-      <Skeleton height="35px" className="skeleton" />
-      <Skeleton height="35px" className="skeleton" />
-      <Skeleton height="35px" className="skeleton" />
-      <Skeleton height="35px" className="skeleton" />
-      <Skeleton height="35px" className="skeleton" />
-      <Skeleton height="35px" className="skeleton" />
-      <Skeleton height="35px" className="skeleton" />
-      <Skeleton height="35px" className="skeleton" />
-      <Skeleton height="35px" className="skeleton" />
+      <Skeleton height="85px" className="skeleton" />
+      <Skeleton height="85px" className="skeleton" />
+      <Skeleton height="85px" className="skeleton" />
+      <Skeleton height="85px" className="skeleton" />
+      <Skeleton height="85px" className="skeleton" />
+      <Skeleton height="85px" className="skeleton" />
     </Stack>
   );
 };

@@ -21,11 +21,12 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const SideDrawer = () => {
-  const { user } = ChatState();
+  const { user, setSelectedChat, chats, setChats } = ChatState();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [loadingChat, setLoadingChat] = useState(false);
 
   const navigate = useNavigate();
 
@@ -70,7 +71,32 @@ const SideDrawer = () => {
     }
   };
 
-  const accessChat = (userId) => {};
+  const accessChat = async (userId) => {
+    setLoadingChat(true);
+    try {
+      const config = {
+        headers: {
+          "content-type": "application/json",
+          Authorization: `Bearer ${user.access}`,
+        },
+      };
+
+      const { data } = await axios.post("api/chat", { userId }, config);
+      setSelectedChat(data);
+      setLoadingChat(false);
+      onClose();
+    } catch (error) {
+      toast({
+        title: "Error loading the chat",
+        description: error.message,
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+        position: "top",
+      });
+    }
+  };
+
   return (
     <>
       <div className="sideMenu">
@@ -98,8 +124,8 @@ const SideDrawer = () => {
           </div>
         </div>
         <div className="logo">
-          <h2>ChatYee</h2>
-          <span>&copy; 2023</span>
+          {/* <h2>ChatYee</h2>
+          <span>&copy; 2023</span> */}
         </div>
       </div>
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
@@ -132,11 +158,7 @@ const SideDrawer = () => {
               <ChatLoading />
             ) : (
               searchResult?.map((user) => (
-                <UserListItem
-                  key={user._id}
-                  user={user}
-                  handleFunction={() => accessChat(user._id)}
-                />
+                <UserListItem user={user} key={user._id} />
               ))
             )}
           </DrawerBody>
