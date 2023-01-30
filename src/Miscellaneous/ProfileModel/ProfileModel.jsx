@@ -9,8 +9,8 @@ import {
   ModalHeader,
   ModalOverlay,
   useDisclosure,
-  Image,
   Box,
+  Avatar,
 } from "@chakra-ui/react";
 import "./ProfileModel.scss";
 
@@ -46,12 +46,11 @@ const ProfileModel = ({ user, children }) => {
                 justifyContent: "center",
               }}
             >
-              <Image
-                borderRadius="full"
-                boxSize="180px"
-                alt={user.name}
+              <Avatar
+                boxSize="200px"
+                cursor="pointer"
+                name={user.name}
                 src={user.pic}
-                style={{}}
               />
             </Box>
             <Box>
@@ -69,7 +68,7 @@ const ProfileModel = ({ user, children }) => {
               </div>
               <div className="titles">
                 <div className="text-content">
-                  <i class="fa-solid fa-envelope"></i>
+                  <i className="fa-solid fa-envelope"></i>
                   <div className="text">
                     <h3>Email</h3>
                     <h1>{user.email}</h1>
