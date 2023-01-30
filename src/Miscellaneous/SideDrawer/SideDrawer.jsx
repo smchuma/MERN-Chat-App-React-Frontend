@@ -28,10 +28,10 @@ const SideDrawer = () => {
           <div className="icon">
             <i class="fa-solid fa-right-from-bracket"></i>
           </div>
-          <div className="logo">
-            <h2>ChatYee</h2>
-            <span>&copy; 2023</span>
-          </div>
+        </div>
+        <div className="logo">
+          <h2>ChatYee</h2>
+          <span>&copy; 2023</span>
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import { ChatState } from "../../Context/chatProvider";
 import { SideDrawer } from "../../Miscellaneous";
-import { ChatNav, MyChats } from "../../Components";
+// import { ChatNav, MyChats } from "../../Components";
 import "./ChatPage.scss";
 
 const ChatPage = () => {
@@ -12,8 +12,8 @@ const ChatPage = () => {
       <div className="chatPage">
         {user && <SideDrawer />}
         <div className="chatSections">
-          {user && <ChatNav />}
-          {user && <MyChats />}
+          {/* {user && <ChatNav />} */}
+          {/* {user && <MyChats />} */}
         </div>
       </div>
     </>

@@ -51,6 +51,7 @@ const ProfileModel = ({ user, children }) => {
                 boxSize="180px"
                 alt={user.name}
                 src={user.pic}
+                style={{}}
               />
             </Box>
             <Box>
